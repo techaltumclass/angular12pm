@@ -22,10 +22,10 @@ export class AuthGuard implements CanActivate {
       this.router.navigate(["/login"], {
         queryParams: { returnUrl: state.url }
       });
-      return true;
+      return false;
     }
 
-    return false;
+    return true;
   }
 
   checkLogin(url: string): Observable<boolean> {

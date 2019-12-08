@@ -18,7 +18,8 @@ export class BlogComponent implements OnInit {
   ) {
     // blogData.getBlogs()
     // window.localStorage.removeItem("blogs")
-    this.blogs = JSON.parse(window.localStorage.getItem("blogs"));
+    console.log(JSON.parse(window.localStorage.getItem("blogs")));
+    this.blogs = this.blogData.getBlogs();
   
   }
   gotoDetails(blogid:any){
